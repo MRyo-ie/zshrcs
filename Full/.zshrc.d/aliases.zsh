@@ -31,6 +31,5 @@
 	alias g_aliases='git config --global --list | grep ^alias\.'
 	
 	# source ~/.zshrc とか、いちいち打つの面倒なので...
-	alias source_zrc='source ~/.zshrc'
-	alias source_zenv='source ~/.zshenv'
+	alias source_zsh='source ~/.zshrc'
 

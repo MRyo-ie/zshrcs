@@ -40,17 +40,19 @@
 	#eval "$(direnv hook zsh)"
 	
 	
-	## jenv (java) 
+	##  jenv (java) 
 	if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 	
 	
-	## pyenv (python) の設定
+	##  pyenv (python) の設定
 	export PYENV_ROOT=${HOME}/.pyenv
 	if [ -d "${PYENV_ROOT}" ]; then
 		export PATH=${PYENV_ROOT}/bin:$PATH
 		eval "$(pyenv init -)"
 	fi
-
+	##  pyenv-virtualenv
+	if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+	
 	## virtualenv
 	export GNUTERM=aqua
 	# 下記if文で指定した WORKON_HOME に仮想環境が構築される。

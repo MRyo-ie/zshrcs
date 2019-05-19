@@ -1,6 +1,5 @@
 ## 各種設定ファイルを読み込み
-for rcfile in $HOME/.zshrc.d/*; do [ -r $rcfile ] && source $rcfile; done
-
+for rcfile in $HOME/.zshrc.d/.backup.git/Full/.zshrc.d/*; do [ -r $rcfile ] && source $rcfile; done
 
 # 補完機能を有効にする
 # 最後に書くと、少しだけ速くなるっぽい？
