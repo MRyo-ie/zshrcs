@@ -9,7 +9,7 @@
 	  # 1行あける
 	  print
 	  # カレントディレクトリ
-	  local left="%{$fg[cyan]%}[${USER}@${HOST%%.*}]${reset_color} %{\e[38;5;2m%}(%~)%{\e[m%}"
+	  local left="%{$fg[cyan]%}[${USER}@${HOST%%.*}] %{\e[38;5;2m%}(%~)%{\e[m%}"
 	  # バージョン管理されてた場合、ブランチ名
 	  vcs_info
 	  local right="%{\e[38;5;32m%}${vcs_info_msg_0_}%{\e[m%}"
@@ -22,8 +22,10 @@
 	
 	  print -P $left${(r:$padwidth:: :)}$right
 	}
+	### zshのRPROMPTがずれるのを直す：https://qiita.com/gorohash/items/e622459b330cbaef5fe5
+	### 色指定の部分を bash の場合は \[ \] で囲む。zsh の場合は %{ %} で囲む
 	# ユーザ名@ホスト名
-	PS1="%{$fg[yellow]%}%1~/ %(!.#.$)> ${reset_color}"
+	PS1="%{$fg[yellow]%}%1~/ %(!.#.$)>  %{${reset_color}%}"
 	# 現在時刻
 	RPROMPT=$'[%{\e[38;5;251m%}%D{%b/%d}, %T%{\e[m%} ]'
 	TMOUT=15

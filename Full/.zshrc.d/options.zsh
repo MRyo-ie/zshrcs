@@ -21,6 +21,8 @@
 	
 	# ssh config で設定したホスト名も Tab補間 できるようにする。
 	function _ssh {
-	  compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
+	  #compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
+	  compadd `fgrep 'Host ' ~/.ssh/conf.d/*.config | awk '{print $2}' | sort`;
+	   # 参考：https://suin.io/568
 	}
 	
