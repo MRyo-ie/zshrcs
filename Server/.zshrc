@@ -44,15 +44,6 @@ alias bd=popd
 
 
 
-## never ever beep ever
-#setopt NO_BEEP
-
-## automatically decide when to page a list of completions
-#LISTMAX=0
-
-## disable mail checking
-#MAILCHECK=0
-
 
 ## zshのプロンプト書式設定
 autoload -U colors
