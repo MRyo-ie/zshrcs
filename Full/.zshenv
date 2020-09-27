@@ -26,23 +26,23 @@
 	# MySQL@5.7
 #	export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
 	# ET ロボコン
-	export PATH=/usr/local/bin/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
-
+#	export PATH=/usr/local/bin/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
+	# Node.js
+	export PATH=$HOME/.nodebrew/current/bin:$PATH
 	
 	
-	###  お役立ちコマンド設定  ###
+	###  その他環境設定  ###
 	# 文字コードの設定
 	export LANG=ja_JP.UTF-8
+	export GNUTERM=aqua	
 
 	###  env 系の設定  ###
 	## direnv
 	#export EDITOR=emacs
 	#eval "$(direnv hook zsh)"
 	
-	
 	##  jenv (java) 
 	if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-	
 	
 	##  pyenv (python) の設定
 	export PYENV_ROOT=${HOME}/.pyenv
@@ -53,17 +53,7 @@
 	##  pyenv-virtualenv
 	if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 	
-	## virtualenv
-	export GNUTERM=aqua
-	# 下記if文で指定した WORKON_HOME に仮想環境が構築される。
-	# 必要になったら、コメントアウトを外す。
-#	if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
-#	    export WORKON_HOME=$HOME/.virtualenvs
-#	    source /usr/local/bin/virtualenvwrapper.sh
-#	fi
 	
-	
-
 	## nvm (Node.js) : Firebase
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

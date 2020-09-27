@@ -43,15 +43,35 @@ alias bd=popd
 
 
 
+###  zsh (zplug) で fish  ###
+# zplugがなければzplugをインストール後zshを再起動
+export ZPLUG_HOME=${HOME}/.zshrc.d/.zplug
+mkdir -p $ZPLUG_HOME/ 2>/dev/null
+if [ ! -e "${ZPLUG_HOME}/init.zsh" ]; then
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+fi
+source ${ZPLUG_HOME}/init.zsh
 
-## never ever beep ever
-#setopt NO_BEEP
+# ここに入れたいプラグインを書いていく(gitのパスで)
+zplug 'zsh-users/zsh-syntax-highlighting'
+zplug 'zsh-users/zsh-autosuggestions'
+# なぜか原因不明のエラーでインストールできない...。
+#zplug "peco/peco", as:command, from:gh-r
+zplug "mollifier/anyframe"
 
-## automatically decide when to page a list of completions
-#LISTMAX=0
+# プラグインがまだインストールされてないならインストールするか聞く
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+# .zplug以下にパスを通す。プラグイン読み込み
+zplug load # --verbose  ### Display the version of zplug
 
-## disable mail checking
-#MAILCHECK=0
+
+
+
 
 
 ## zshのプロンプト書式設定
@@ -61,7 +81,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 # ユーザ名@ホスト名
-PS1="%{$fg[yellow]%}[${USER}@${HOST%%.*}]${reset_color} %1~%(!.#.$) > "
+PS1="%{$fg[yellow]%}[${USER}@${HOST%%.*}]%{${reset_color}%} %1~%(!.#.$) > "
 # 現在時刻
 RPROMPT=$'[ %{\e[38;5;251m%}%D{%b%d}, %T%{\e[m%} ]'
 TMOUT=10

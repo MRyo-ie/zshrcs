@@ -15,7 +15,7 @@
 	alias rsync='rsync -auvz --progress --exclude ".DS_Store" '
 	alias rsyncDEL='rsync -auvz --progress --delete'
 	alias rsyncEX_mac_py='rsync  -auvz --progress --exclude-from=$HOME/.zshrc.d/.git_repository/Full/.rsync/.ex_mac_py'
-	alias rsyncEX_gitignore='rsync  -auvz --progress --exclude-from=.gitignore'
+	alias rsyncEX_gitignore='rsync  -auvz --progress --exclude-from=.gitignore   --exclude .git'
 	
 	#alias mamp_mysql='/Applications/MAMP/Library/bin/mysql --auto-rehash -u root -ps9_04'
 
