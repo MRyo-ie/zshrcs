@@ -72,8 +72,6 @@ zplug load # --verbose  ### Display the version of zplug
 
 
 
-
-
 ## zshのプロンプト書式設定
 autoload -U colors
 colors
