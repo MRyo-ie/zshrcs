@@ -39,6 +39,9 @@ DIRSTACKSIZE=10
 setopt AUTO_PUSHD
 alias bd=popd
 
+# git を早く打つ
+alias g='git'
+alias g_aliases='git config --global --list | grep ^alias\.'
 
 
 

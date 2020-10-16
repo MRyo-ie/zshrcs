@@ -35,3 +35,4 @@
 	# source ~/.zshrc とか、いちいち打つの面倒なので...
 	alias source_zsh='source ~/.zshrc'
 
+	alias mkdirs_list='python3  ~/.zshrc.d/.git_repository/Full/.funcs/mkdirs_txt_list.py'
