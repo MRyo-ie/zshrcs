@@ -35,4 +35,6 @@
 	# source ~/.zshrc とか、いちいち打つの面倒なので...
 	alias source_zsh='source ~/.zshrc'
 
+	# 自作関数
 	alias mkdirs_list='python3  ~/.zshrc.d/.git_repository/Full/.funcs/mkdirs_txt_list.py'
+	alias org_t_enpdf_py='python3  ~/.zshrc.d/.git_repository/Full/.funcs/toTranslatePDF.py'
