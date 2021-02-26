@@ -94,37 +94,37 @@
 	zplug load # --verbose  ### Display the version of zplug
 
 
-	###  peco  ###
-	##  ^R : コマンド履歴検索
-	function peco-history-selection() {
-	    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-	    CURSOR=$#BUFFER
-	    zle reset-prompt
-	}
-	zle -N peco-history-selection
-	bindkey '^R' peco-history-selection
+	# ###  peco  ###
+	# ##  ^R : コマンド履歴検索
+	# function peco-history-selection() {
+	#     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+	#     CURSOR=$#BUFFER
+	#     zle reset-prompt
+	# }
+	# zle -N peco-history-selection
+	# bindkey '^R' peco-history-selection
 
-	##  ^E : cdr (フォルダ履歴検索)
-	if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
-	    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-	    add-zsh-hook chpwd chpwd_recent_dirs
-	    zstyle ':completion:*' recent-dirs-insert both
-	    zstyle ':chpwd:*' recent-dirs-default true
-	    zstyle ':chpwd:*' recent-dirs-max 1000
-		# 存在しない場合
-		mkdir -p "$HOME/.zshrc.d/.cache/" 2>/dev/null
-	    zstyle ':chpwd:*' recent-dirs-file "$HOME/.zshrc.d/.cache/chpwd-recent-dirs"
-	fi
+	# ##  ^E : cdr (フォルダ履歴検索)
+	# if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+	#     autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+	#     add-zsh-hook chpwd chpwd_recent_dirs
+	#     zstyle ':completion:*' recent-dirs-insert both
+	#     zstyle ':chpwd:*' recent-dirs-default true
+	#     zstyle ':chpwd:*' recent-dirs-max 1000
+	# 	# 存在しない場合
+	# 	mkdir -p "$HOME/.zshrc.d/.cache/" 2>/dev/null
+	#     zstyle ':chpwd:*' recent-dirs-file "$HOME/.zshrc.d/.cache/chpwd-recent-dirs"
+	# fi
 	
-	function peco-cdr () {
-	    local selected_dir="$(cdr -l | sed 's/^[[:digit:]]*[[:blank:]]*//' | peco --prompt="cdr >" --query "$LBUFFER")"
-	    if [ -n "$selected_dir" ]; then
-	        BUFFER="cd ${selected_dir}"
-	        zle accept-line
-	    fi
-	}
-	zle -N peco-cdr
-	bindkey '^E' peco-cdr
+	# function peco-cdr () {
+	#     local selected_dir="$(cdr -l | sed 's/^[[:digit:]]*[[:blank:]]*//' | peco --prompt="cdr >" --query "$LBUFFER")"
+	#     if [ -n "$selected_dir" ]; then
+	#         BUFFER="cd ${selected_dir}"
+	#         zle accept-line
+	#     fi
+	# }
+	# zle -N peco-cdr
+	# bindkey '^E' peco-cdr
 	
 	
 	

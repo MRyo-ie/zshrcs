@@ -8,7 +8,7 @@ autoload -Uz compinit; compinit
 
 # rbenv の優先度を上げる。
 ## rbenv (ruby) 
-export PATH=$HOME/.rbenv/shims/ruby:$PATH
+# export PATH=$HOME/.rbenv/shims/ruby:$PATH
 #eval "$(rbenv init -)"
 
 

@@ -15,6 +15,9 @@
 	DIRSTACKSIZE=10
 	setopt AUTO_PUSHD
 	
+    # zmv  zsh: no matches found: *_t.pdf
+    setopt nonomatch
+
 
 	### その他zshお役立ち
 	bindkey '^J' self-insert
