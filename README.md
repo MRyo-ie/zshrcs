@@ -2,8 +2,8 @@
 ## init
 1. `~/.zshrc.d/` ディレクトリを作る。
 2. `~/.zshrc.d/` 下に入って、このリポジトリを clone する。
-3. 2. のディレクトリ名を `.backup.git/` に変更する。
-  （`~/.zshrc.d/.backup.git/~` になればOK）
+3. 2. のディレクトリ名を `.git_repository/` に変更する。
+  （`~/.zshrc.d/.git_repository/~` になればOK）
   
 ## Full ver の場合
 ### 基本設定

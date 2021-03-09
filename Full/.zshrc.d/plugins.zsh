@@ -127,5 +127,18 @@
 	# bindkey '^E' peco-cdr
 	
 	
+
+    # zip をファイル名と同じディレクトリに解凍する。
+    unzip_f() {
+        if [ "$1" = "" ]
+        then
+            echo '[Error] 引数がありません。'
+        else
+            f=$1;
+            d="${f%.zip}";
+            mkdir $d;
+            unzip $f -d $d;
+        fi
+    }
 	
 	
