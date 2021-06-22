@@ -142,3 +142,17 @@
     }
 	
 	
+    # TeX の bib をファイル分割する
+    # （分割した ./bibs/~.bib を、./all.bib にまとめた後、pbibtex を実行する。）
+    pbibtex_dir() {
+        if [ -e "./bibs" ]; then
+            cat ./bibs/*.bib > "$1".bib
+            # cat "$1".bib
+        else
+            echo '[Info] ./bibs/ が見つかりませんでした。通常の pbobtex を実行します。'
+        fi
+
+        pbibtex $1
+    }
+
+    

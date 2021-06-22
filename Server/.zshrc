@@ -7,7 +7,7 @@
 export PATH=/usr/local/bin:/opt/homebrew/bin:/sbin:/bin:/usr/bin:/usr/texbin:$PATH
 
 # 文字コードの設定
-export LANG=ja_JP.UTF-8
+# export LANG=ja_JP.UTF-8
 # 補完機能
 autoload -U compinit
 compinit
