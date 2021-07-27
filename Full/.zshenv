@@ -25,10 +25,8 @@
 #	export PATH=$PATH:/Applications/MAMP/Library/bin
 	# MySQL@5.7
 #	export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
-	# ET ロボコン
-#	export PATH=/usr/local/bin/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
-	# Node.js
-	export PATH=$HOME/.nodebrew/current/bin:$PATH
+	# export PATH=$HOME/_pLearnings/Learning/athletics_TOITS_v4:$PATH
+	export PATH=$HOME/_pLearnings/Learning/athletics_track:$PATH
 	
 	
 	###  その他環境設定  ###

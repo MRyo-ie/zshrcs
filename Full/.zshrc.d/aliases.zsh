@@ -25,6 +25,9 @@
 	alias lsa='ls -FA'
 	alias l='ls -lFA'
 
+    # # TeX の bib で、bibs/ フォルダがあった場合、その下の bib を全てまとめて ./all.bib を作る。
+    # alias l='ls -lFA'
+
 	# brew doctor で、pyenv関係の warningを消す。
 	alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 	
@@ -38,6 +41,8 @@
 	##  自作関数  ##
 	alias mkdirs_list='python3  ~/.zshrc.d/.git_repository/Full/.funcs/mkdirs_txt_list.py'
     # org_ 系
-	alias org_trans_enpdf='python3  ~/.zshrc.d/.git_repository/Full/.funcs/toTranslatePDF.py'
+	alias o_trans_enpdf='python3  ~/.zshrc.d/.git_repository/Full/.funcs/toTranslatePDF.py'
+	alias o_trans_update='sh  ~/.zshrc.d/.git_repository/Full/.funcs/toTrans_update_Selenium/exec.sh'
+	alias o_ocr_area='python3  ~/.zshrc.d/.git_repository/Full/.funcs/area_ocr/proto_area_ocr.py'
     # edit_ 系
 	alias edit_zsh='code /Users/m_ryo/.zshrc.d/.git_repository'
