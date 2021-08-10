@@ -1,0 +1,6 @@
+[submodule "Full/.funcs/_util_area_ocr"]
+	path = Full/.funcs/_util_area_ocr
+	url = git@github.com:MRyo-ie/_util_area_ocr.git
+[submodule "Full/.funcs/area_ocr"]
+	path = Full/.funcs/area_ocr
+	url = git@github.com:MRyo-ie/_util_area_ocr.git
