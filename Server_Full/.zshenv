@@ -10,9 +10,6 @@
 
  	###  PATHの設定  ###
 	export PATH=/usr/local/bin:/sbin:/bin:/usr/bin:$PATH
-	#/opt/homebrew/bin:
-	# # Prolog
-	# export PATH=/Applications/SWI-Prolog.app/Contents/MacOS:$PATH
 	# Python virtualenv
 	export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 	#export VIRTUALENVWRAPPER_VIRTUALENV=/opt/homebrew/bin/virtualenv
@@ -25,8 +22,6 @@
 #	export PATH=$PATH:/Applications/MAMP/Library/bin
 	# MySQL@5.7
 #	export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
-	# ET ロボコン
-#	export PATH=/usr/local/bin/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
 	# Node.js
 	export PATH=$HOME/.nodebrew/current/bin:$PATH
 

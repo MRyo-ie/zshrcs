@@ -4,7 +4,7 @@
 # functions, options, key bindings, etc.
 #
 
-export PATH=/usr/local/bin:/opt/homebrew/bin:/sbin:/bin:/usr/bin:/usr/texbin:$PATH
+export PATH=/usr/local/bin:/sbin:/bin:/usr/bin:$PATH
 
 # 文字コードの設定
 # export LANG=ja_JP.UTF-8
@@ -46,31 +46,31 @@ alias g_aliases='git config --global --list | grep ^alias\.'
 
 
 
-###  zsh (zplug) で fish  ###
-# zplugがなければzplugをインストール後zshを再起動
-export ZPLUG_HOME=${HOME}/.zshrc.d/.zplug
-mkdir -p $ZPLUG_HOME/ 2>/dev/null
-if [ ! -e "${ZPLUG_HOME}/init.zsh" ]; then
-    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-fi
-source ${ZPLUG_HOME}/init.zsh
+# ###  zsh (zplug) で fish  ###
+# # zplugがなければzplugをインストール後zshを再起動
+# export ZPLUG_HOME=${HOME}/.zshrc.d/.zplug
+# mkdir -p $ZPLUG_HOME/ 2>/dev/null
+# if [ ! -e "${ZPLUG_HOME}/init.zsh" ]; then
+#     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+# fi
+# source ${ZPLUG_HOME}/init.zsh
 
-# ここに入れたいプラグインを書いていく(gitのパスで)
-zplug 'zsh-users/zsh-syntax-highlighting'
-zplug 'zsh-users/zsh-autosuggestions'
-# なぜか原因不明のエラーでインストールできない...。
-#zplug "peco/peco", as:command, from:gh-r
-zplug "mollifier/anyframe"
+# # ここに入れたいプラグインを書いていく(gitのパスで)
+# zplug 'zsh-users/zsh-syntax-highlighting'
+# zplug 'zsh-users/zsh-autosuggestions'
+# # なぜか原因不明のエラーでインストールできない...。
+# #zplug "peco/peco", as:command, from:gh-r
+# zplug "mollifier/anyframe"
 
-# プラグインがまだインストールされてないならインストールするか聞く
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-# .zplug以下にパスを通す。プラグイン読み込み
-zplug load # --verbose  ### Display the version of zplug
+# # プラグインがまだインストールされてないならインストールするか聞く
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
+# # .zplug以下にパスを通す。プラグイン読み込み
+# zplug load # --verbose  ### Display the version of zplug
 
 
 
@@ -89,3 +89,17 @@ TMOUT=10
 TRAPALRM() {
       zle reset-prompt
 }
+
+
+# 色の名前	数字
+# black	0
+# red	1
+# green	2
+# yellow	3
+# blue	4
+# magenta	5
+# cyan	6
+# white	7
+
+
+
