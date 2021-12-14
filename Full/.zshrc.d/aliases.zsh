@@ -45,4 +45,4 @@
 	alias o_trans_update='sh  ~/.zshrc.d/.git_repository/Full/.funcs/toTrans_update_Selenium/exec.sh'
 	alias o_ocr_area='python3  ~/.zshrc.d/.git_repository/Full/.funcs/area_ocr/proto_area_ocr.py'
     # edit_ 系
-	alias edit_zsh='code /Users/m_ryo/.zshrc.d/.git_repository'
+	alias edit_zsh='code ~/.zshrc.d/.git_repository'
